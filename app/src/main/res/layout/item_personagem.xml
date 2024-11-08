@@ -1,0 +1,100 @@
+<!-- res/layout/item_personagem.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:orientation="vertical"
+                                                   android:padding="8dp"
+                                                   android:background="?android:attr/selectableItemBackground">
+
+    <TextView
+            android:text="Carisma"
+            android:layout_width="100dp"
+            android:layout_height="23dp" android:id="@+id/id_carisma"
+            app:layout_constraintTop_toBottomOf="@+id/id_sabedoria" android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/id_deletar"/>
+    <TextView
+            android:text="Sabedoria"
+            android:layout_width="100dp"
+            android:layout_height="23dp" android:id="@+id/id_sabedoria"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/id_raca"
+            android:layout_marginTop="10dp"/>
+    <TextView
+            android:text="Inteligência"
+            android:layout_width="100dp"
+            android:layout_height="23dp" android:id="@+id/id_inteligencia"
+            app:layout_constraintTop_toBottomOf="@+id/id_constituicao"
+            app:layout_constraintEnd_toStartOf="@+id/id_carisma" android:layout_marginEnd="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/id_Editar"/>
+    <TextView
+            android:text="Destreza"
+            android:layout_width="100dp"
+            android:layout_height="23dp" android:id="@+id/id_destreza"
+            app:layout_constraintTop_toBottomOf="@+id/id_forca"
+            app:layout_constraintEnd_toStartOf="@+id/id_inteligencia" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp" app:layout_constraintBottom_toTopOf="@+id/id_Editar"/>
+    <TextView
+            android:text="Constituição"
+            android:layout_width="100dp"
+            android:layout_height="23dp" android:id="@+id/id_constituicao"
+            app:layout_constraintEnd_toStartOf="@+id/id_sabedoria"
+            android:layout_marginEnd="25dp" app:layout_constraintTop_toBottomOf="@+id/id_raca"
+            android:layout_marginTop="10dp"/>
+    <TextView
+            android:id="@+id/nomeTextView"
+            android:layout_width="161dp"
+            android:layout_height="34dp"
+            android:text="Nome"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="14dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="24dp"/>
+    <TextView
+            android:id="@+id/classeTextView"
+            android:layout_width="120dp"
+            android:layout_height="23dp"
+            android:text="Classe"
+            app:layout_constraintEnd_toStartOf="@+id/id_raca"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="70dp"
+            android:layout_marginEnd="16dp" app:layout_constraintTop_toBottomOf="@+id/nomeTextView"
+            android:layout_marginTop="10dp" app:layout_constraintBottom_toTopOf="@+id/id_constituicao"/>
+    <TextView
+            android:id="@+id/nivelTextView"
+            android:layout_width="103dp"
+            android:layout_height="34dp"
+            android:text="Nível"
+            app:layout_constraintBottom_toTopOf="@+id/id_raca"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Raca"
+            android:layout_width="120dp"
+            android:layout_height="23dp" android:id="@+id/id_raca"
+            android:layout_marginEnd="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/nivelTextView"/>
+    <TextView
+            android:text="Força"
+            android:layout_width="100dp"
+            android:layout_height="23dp" android:id="@+id/id_forca"
+            app:layout_constraintEnd_toStartOf="@+id/id_constituicao"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="25dp"
+            android:layout_marginEnd="2dp" app:layout_constraintTop_toBottomOf="@+id/classeTextView"
+            android:layout_marginTop="10dp"/>
+    <Button
+            android:text="Editar"
+            android:layout_width="121dp"
+            android:layout_height="64dp" android:id="@+id/id_Editar"
+            app:layout_constraintEnd_toStartOf="@+id/id_deletar" android:layout_marginEnd="28dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="72dp"
+            android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/id_destreza"/>
+    <Button
+            android:text="Deletar"
+            android:layout_width="121dp"
+            android:layout_height="64dp" android:id="@+id/id_deletar"
+            android:layout_marginEnd="69dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp" app:layout_constraintTop_toBottomOf="@+id/id_carisma"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

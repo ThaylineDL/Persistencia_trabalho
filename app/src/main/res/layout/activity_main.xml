@@ -1,0 +1,135 @@
+<!-- res/layout/activity_main.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lista de Personagens"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp"/>
+
+        <!-- Formulário para adicionar Personagem -->
+        <EditText
+                android:id="@+id/etNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome do Personagem" />
+
+        <EditText
+                android:id="@+id/etClasse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Classe do Personagem" />
+
+        <EditText
+                android:id="@+id/etNivel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nível do Personagem"
+                android:inputType="number" />
+
+        <!-- Campos adicionais para atributos e raça -->
+        <EditText
+                android:id="@+id/etRaca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Raça do Personagem" />
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <EditText
+                    android:id="@+id/etForca"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Força"
+                    android:inputType="number"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <EditText
+                    android:id="@+id/etDestreza"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Destreza"
+                    android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <EditText
+                    android:id="@+id/etConstituicao"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Constituição"
+                    android:inputType="number"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <EditText
+                    android:id="@+id/etInteligencia"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Inteligência"
+                    android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <EditText
+                    android:id="@+id/etSabedoria"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Sabedoria"
+                    android:inputType="number"/>
+            <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"/>
+            <EditText
+                    android:id="@+id/etCarisma"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Carisma"
+                    android:inputType="number"/>
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/btnAddPersonagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adicionar Personagem"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="16dp" />
+
+        <!-- RecyclerView para lista de Personagens -->
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="484dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="300dp"
+                          android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="461dp"
+                        android:layout_marginTop="16dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</ScrollView>
